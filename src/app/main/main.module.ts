@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 
 
@@ -11,7 +12,8 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     LoginComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MainPageComponent
   ],
   imports: [
     CommonModule,
