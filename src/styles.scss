@@ -15,3 +15,7 @@
         color: $univ-red;
     }
 }
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: $univ-black;
+}
