@@ -1,5 +1,5 @@
-<div class="d-flex justify-content-center align-items-center content">
-    <app-header *ngIf="authService.isUserAuthenticated()"></app-header>
+<app-header *ngIf="authService.isUserAuthenticated()"></app-header>
+<div class="d-flex justify-content-center content" [ngClass]="{'align-items-center': !authService.isUserAuthenticated()}">
     <router-outlet></router-outlet>    
 </div>
 <app-footer></app-footer>

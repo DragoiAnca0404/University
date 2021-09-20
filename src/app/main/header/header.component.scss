@@ -1,0 +1,8 @@
+@import "../../../styles.scss";
+@import "../../../variables.scss";
+
+.header {
+    height: $footer-height;
+    background-color: $univ-black;
+    color: $univ-red;
+}
