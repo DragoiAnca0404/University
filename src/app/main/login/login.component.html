@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center align-items-center">
   <mat-card class="m-3">
-      <form #loginForm="ngForm">
+      <form #loginForm="ngForm" (ngSubmit)="login()">
         <h2 class="d-flex align-items-center"><mat-icon>account_circle</mat-icon>&nbsp;Login</h2>
         <div class="d-flex flex-column">
             <mat-form-field appearance="outline">
