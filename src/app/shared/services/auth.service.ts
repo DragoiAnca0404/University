@@ -23,6 +23,6 @@ export class AuthService {
     let requestParams = new HttpParams();
     requestParams = requestParams.append('username', params.username);
     
-    return this.httpClient.get(`${this.defaultBeUrl}/login`, {params: requestParams});
+    return this.httpClient.post(`${this.defaultBeUrl}/login`,{'password':params.password}, {params: requestParams, observe: 'response'});
   }
 }

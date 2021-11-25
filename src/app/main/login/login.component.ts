@@ -31,8 +31,8 @@ export class LoginComponent implements OnInit {
     };
 
     this.authService.authenticate(params).subscribe(resp => {
-      localStorage.setItem('jwt', resp.token);
-      this.router.navigateByUrl('/home');
+      localStorage.setItem('jwt', resp.body.token);
+      this.router.navigateByUrl('/main-page');
     });
   }
 }
