@@ -13,7 +13,9 @@ const routes: Routes = [
     path: 'main-page',
     component: MainPageComponent,
     canActivate: [AuthGuard]
-  }
+  },
+  { path : '', redirectTo:'/login', pathMatch : 'full'}
+
 ];
 
 @NgModule({
