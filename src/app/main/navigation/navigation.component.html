@@ -3,35 +3,25 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar><mat-icon>account_box</mat-icon>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Details</a>
-      <a mat-list-item href="#">All courses</a>
-      <a mat-list-item href="#">Grades</a>
-      <a mat-list-item href="#">Class schedule</a>
-      <a mat-list-item href="#">Community</a>
-      <a mat-list-item href="#">Events</a>
-      <a mat-list-item href="#">Campus Map</a>
-      <a mat-list-item href="#">Quiz</a>
+      <a mat-list-item href="#"><mat-icon>how_to_reg</mat-icon>Details</a>
+      <a mat-list-item href="#"><mat-icon>library_books</mat-icon>All courses</a>
+      <a mat-list-item href="#"><mat-icon>grade</mat-icon>Grades</a>
+      <a mat-list-item href="#"><mat-icon>class</mat-icon>Class schedule</a>
+      <a mat-list-item href="#"><mat-icon>people</mat-icon>Community</a>
+      <a mat-list-item href="#"><mat-icon>event_available</mat-icon>Events</a>
+      <a mat-list-item href="#"><mat-icon> map</mat-icon>Campus Map</a>
+      <a mat-list-item href="#"><mat-icon>assessment</mat-icon>Quiz</a>
     </mat-nav-list>
-    <mat-toolbar>Settings</mat-toolbar>
+    <mat-toolbar><mat-icon>perm_data_setting</mat-icon>Settings</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">My profile</a>
-      <a mat-list-item href="#">Quit</a>
+      <a mat-list-item href="#"><mat-icon>account_circle</mat-icon>My profile</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>University</span>
-    </mat-toolbar>
-    <app-dashboard></app-dashboard>
+
+  <app-header></app-header>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
