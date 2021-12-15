@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,6 +11,8 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   isPasswordHidded: boolean = true;
+  showError= false;
+
 
   constructor(
     public authService: AuthService,
@@ -34,7 +34,13 @@ export class LoginComponent implements OnInit {
 
     this.authService.authenticate(params).subscribe(resp => {
       localStorage.setItem('jwt', resp.body.token);
+      localStorage.setItem('name', resp.body.name);
+      localStorage.setItem('surname', resp.body.surname);
+      localStorage.setItem('role', resp.body.role);
       this.router.navigateByUrl('/main-page');
+    },
+    error =>{
+      this.showError = true;
     });
   }
 }
