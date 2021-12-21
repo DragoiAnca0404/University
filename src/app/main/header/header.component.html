@@ -1,5 +1,9 @@
 <div class="header d-flex justify-content-end">
-    <h4>Role: {{role}}</h4>
-    <p> Name and Surname: {{name}} {{surname}}</p>
-    <button (click)="logout()" mat-mini-fab color="warn"><mat-icon>power_settings_new</mat-icon></button>
+    
+    <div>
+        <h4>Role: {{role}}</h4>
+        <p> Name and Surname: {{name}} {{surname}}</p>
+    </div>
+
+    <button (click)="logout()" mat-mini-fab matTooltip="Log Out!" color="warn"><mat-icon>power_settings_new</mat-icon></button>
 </div>

@@ -5,8 +5,8 @@
         <mat-icon>account_circle</mat-icon>&nbsp;Login
       </h2>
 
-      <div [hidden]="!showError" class="alert-danger alert">
-        <span >Login or Password is incorrect! :(</span>
+      <div *ngIf="showError" class="alert-danger alert">
+        <span >Username or password is incorrect! :(</span>
       </div>
 
       <div class="d-flex flex-column">
