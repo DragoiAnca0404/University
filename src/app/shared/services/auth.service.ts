@@ -25,4 +25,14 @@ export class AuthService {
     
     return this.httpClient.post(`${this.defaultBeUrl}/login`,{'password':params.password}, {params: requestParams, observe: 'response'});
   }
+
+  displayDetails(params: any): Observable<any> {
+
+    let requestParams = new HttpParams();
+    requestParams = requestParams.append('username', params.username);
+
+
+    return this.httpClient.get(`${this.defaultBeUrl}/UserDisplay`,{params: requestParams});
+
+  }
 }
