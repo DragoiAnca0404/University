@@ -1,9 +1,8 @@
+<p>&nbsp;</p>
 <div class="d-flex justify-content-center">
-
     <mat-card class="example-card" *ngFor="let item of users">
-        <mat-card-title>{{item.surname}}</mat-card-title>
-        <mat-card-title>{{item.name}}</mat-card-title>
-        <mat-card-subtitle><p>email:</p>{{item.email}}</mat-card-subtitle>
+        <mat-card-title>{{item.surname}} {{item.name}}</mat-card-title>
+        <mat-card-subtitle>email: {{item.email}}</mat-card-subtitle>
         <mat-card-content>
           <p>Course: {{item.course}}</p>
           <p>Degree: {{item.degree}}</p>
@@ -11,7 +10,5 @@
           <p>Major: {{item.major}}</p>
         </mat-card-content>
       </mat-card>
-        
-
 </div>
 
