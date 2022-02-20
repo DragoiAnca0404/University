@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable,BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -13,6 +13,8 @@ export class AuthService {
   ) { }
 
   defaultBeUrl: string = environment.backendUrl;
+  private UserRole    = new BehaviorSubject<any>(localStorage.getItem('role'));
+
 
   isUserAuthenticated(): boolean {
     const token = localStorage.getItem('jwt');
@@ -35,4 +37,10 @@ export class AuthService {
     return this.httpClient.get(`${this.defaultBeUrl}/UserDisplay`,{params: requestParams});
 
   }
+
+  get currentUserRole() 
+  {
+      return this.UserRole.asObservable();
+  }
+  
 }

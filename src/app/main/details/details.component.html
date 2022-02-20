@@ -6,8 +6,8 @@
         <mat-card-content>
           <p>Course: {{item.course}}</p>
           <p>Degree: {{item.degree}}</p>
-          <p>Pay: {{item.pay}}</p>
-          <p>Major: {{item.major}}</p>
+          <p *ngIf="role == 'Admin'">Pay: {{item.pay}}</p>
+          <p *ngIf="role == 'Admin'">Major: {{item.major}}</p>
         </mat-card-content>
       </mat-card>
 </div>

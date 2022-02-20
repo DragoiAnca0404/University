@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 export class DetailsComponent implements OnInit {
   username:any;
   users:any;
+  role:any;
 
   constructor(
     public authService: AuthService
@@ -21,10 +22,15 @@ export class DetailsComponent implements OnInit {
     this.authService.displayDetails(params).subscribe(data=>{
     console.log("data",data);
     this.users=data
-  }) }
+  }) 
+
+  this.authService.currentUserRole.subscribe(result => {this.role = result});
+
+}
 
   ngOnInit(): void {
     this.username = localStorage.getItem('username');
+    this.role = localStorage.getItem('role');
   }
 
 }
