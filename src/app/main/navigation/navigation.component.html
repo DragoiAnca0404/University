@@ -18,7 +18,7 @@
       <a mat-list-item href="#"><mat-icon>class</mat-icon>&nbsp;<span *ngIf="isExpanded">Class schedule</span></a>
       <a mat-list-item href="#"><mat-icon>people</mat-icon>&nbsp;<span *ngIf="isExpanded">Community</span></a>
       <a mat-list-item href="#"><mat-icon>event_available</mat-icon>&nbsp;<span *ngIf="isExpanded">Events</span></a>
-      <a mat-list-item href="#"><mat-icon> map</mat-icon>&nbsp;<span *ngIf="isExpanded">Campus Map</span></a>
+      <a mat-list-item [routerLink]="['/map']"><mat-icon> map</mat-icon>&nbsp;<span *ngIf="isExpanded">Campus Map</span></a>
       <a mat-list-item href="#"><mat-icon>assessment</mat-icon>&nbsp;<span *ngIf="isExpanded">Quiz</span></a>
     </mat-nav-list>
     <mat-toolbar><mat-icon>perm_data_setting</mat-icon>&nbsp;<span *ngIf="isExpanded">Settings</span></mat-toolbar>
