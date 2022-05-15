@@ -4,6 +4,7 @@ import { LoginComponent } from './main/login/login.component';
 import { MainPageComponent } from './main/main-page/main-page.component';
 import { DetailsComponent } from './main/details/details.component';
 import { AuthGuard } from './shared/guards/auth.guard';
+import { MapComponent } from './main/map/map.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path:'details',
     component: DetailsComponent
+  },
+  {
+    path:'map',
+    component: MapComponent
   },
   { path : '', redirectTo:'/login', pathMatch : 'full'}
 

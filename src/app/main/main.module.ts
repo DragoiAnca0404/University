@@ -11,6 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { DetailsComponent } from './details/details.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { MapComponent } from './map/map.component';
 
 
 
@@ -21,7 +22,8 @@ import { AppRoutingModule } from '../app-routing.module';
     FooterComponent,
     MainPageComponent,
     NavigationComponent,
-    DetailsComponent
+    DetailsComponent,
+    MapComponent
   ],
   imports: [
     AppRoutingModule,
